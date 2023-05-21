@@ -24,7 +24,7 @@ const App = () => {
       const data = await response.json();
       
       console.log(data);
-      
+
       setData(data);
     }
     fetchPosts();
@@ -85,12 +85,12 @@ const App = () => {
 
               {/* feed */}
                 <section className="w-full flex flex-col  justify-center items-center ">
-                    <h1 className="mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center">
+                    <h1 className="mt-5 text-4xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center">
                       Test & coding
-                      <br className="max-md:hidden" />
+                      <br className="max-md:hidden " />
                       <span className="bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent 
                       text-center">
-                        Frontend Developer
+                       {" "} Frontend Developer
                       </span>
                     </h1>
                     <p className="mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl text-center">

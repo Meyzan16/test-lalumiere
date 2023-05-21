@@ -45,9 +45,8 @@ const PromptCard = ({dataa}) => {
 
   return (
 
-    <section>
-      <div className=" mt-12  mb-12 relative  overflow-x-auto shadow-md sm:rounded-lg">
-          <div className="pb-4 bg-primary bg-opacity-50 px-4 py-4">
+      <section className="w-full mt-12  mb-12 relative  overflow-x-auto shadow-md sm:rounded-lg">
+          <div className="w-full  bg-primary bg-opacity-50 px-4 py-4">
            
                 <select value={selectedCategory} onChange={handleChange} id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg
                  focus:ring-primary focus:border-primary block w-full p-2.5">
@@ -68,6 +67,9 @@ const PromptCard = ({dataa}) => {
               <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                   <tr>
                       
+                      <th scope="col" className="px-6 py-3">
+                          Image
+                      </th>
                       <th scope="col" className="px-6 py-3">
                           Name
                       </th>
@@ -92,8 +94,19 @@ const PromptCard = ({dataa}) => {
                         
                           <tr key={index} className="bg-white border-b 
                              hover:bg-gray-50 ">
-                              <th scope="row" className="px-6 py-4 font-medium
-                               text-gray-900 whitespace-nowrap">
+                              <td scope="row" className="px-6 py-4">
+                                    <div className='w-10 h-10 bg-gradient-to-r
+                                    from-primary to-gray-400
+                                        rounded-full flex items-center justify-center 
+                                        object-cover overflow-hidden '>
+                                            <img src= {a.thumbnail.medium}  alt=""
+                                            className='object-cover object-center' width={25} />
+                                    </div>
+                                </td>
+                                <th className="px-6 py-4">
+                                    {a.name}
+                                </th>
+                              <th className="px-6 py-4">
                                   {a.name}
                               </th>
                               <td className="px-6 py-4">
@@ -120,9 +133,17 @@ const PromptCard = ({dataa}) => {
                         
                         <tr key={index} className="bg-white border-b 
                            hover:bg-gray-50 ">
-                            <th scope="row" className="px-6 py-4 font-medium
-                             text-gray-900 whitespace-nowrap">
-                                {a.name}
+                            <td scope="row" className="px-6 py-4">
+                                <div className='w-10 h-10 bg-gradient-to-r
+                                from-primary to-gray-400
+                                    rounded-full flex items-center justify-center 
+                                    object-cover overflow-hidden '>
+                                        <img src= {a.thumbnail.medium}  alt=""
+                                        className='object-cover object-center' width={25} />
+                                </div>
+                            </td>
+                            <th className="px-6 py-4">
+                                  {a.name}
                             </th>
                             <td className="px-6 py-4">
                                 {a.home}
@@ -151,9 +172,8 @@ const PromptCard = ({dataa}) => {
           {
           showModal && <Modal setShowModal={setShowModal} activeID={activeID} />
             }
-      </div>
-    </section>
-
+      </section>
+    
 
     // <div className=' flex-1 break-inside-avoid rounded-lg border
     //  border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 
